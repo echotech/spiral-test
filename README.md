@@ -37,9 +37,7 @@ This is a test suite written in JavaScript using the Jest framework to test the 
 
 1. Clone or download this repository to your local machine.
 
-2. Open a terminal/command prompt and navigate to the `__tests__` directory within the cloned repository.
-
-3. Install required Node.js packages: ```npm install```
+2. Install required Node.js packages: ```npm install```
 
 ## Running the Jest Tests
 
