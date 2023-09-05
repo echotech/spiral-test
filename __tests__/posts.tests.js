@@ -1,7 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 
-const logFilePath = './logs/json_test.log'; // Specify the path to the log file
+const logFilePath = './logs/json_test.log'; 
 
 // Configure logging
 const log = (message) => {
@@ -10,7 +10,6 @@ const log = (message) => {
   fs.appendFileSync(logFilePath, logMessage, 'utf8');
 };
 
-// Test suite for the 'https://jsonplaceholder.typicode.com/posts' endpoint
 describe('JSONPlaceholder Posts API', () => {
   const baseUrl = 'https://jsonplaceholder.typicode.com';
   const postsEndpoint = `${baseUrl}/posts`;
@@ -23,7 +22,7 @@ describe('JSONPlaceholder Posts API', () => {
   test('should retrieve posts', async () => {
     const response = await axios.get(postsEndpoint);
     expect(response.status).toBe(200);
-    expect(response.data).toHaveLength(100); // Assuming there are 100 posts
+    expect(response.data).toHaveLength(100); 
   });
 
   // Test to check the content of a specific post
@@ -39,7 +38,7 @@ describe('JSONPlaceholder Posts API', () => {
 
   // Test to check invalid post ID
   test('should handle invalid post ID', async () => {
-    const invalidPostId = 9999; // Assuming an invalid post ID
+    const invalidPostId = 9999; 
     try {
       await axios.get(`${postsEndpoint}/${invalidPostId}`);
     } catch (error) {
@@ -49,7 +48,7 @@ describe('JSONPlaceholder Posts API', () => {
 
   // Test to check non-numeric post ID
   test('should handle non-numeric post ID', async () => {
-    const nonNumericPostId = 'abc'; // Non-numeric post ID
+    const nonNumericPostId = 'abc'; 
     try {
       await axios.get(`${postsEndpoint}/${nonNumericPostId}`);
     } catch (error) {
@@ -59,10 +58,10 @@ describe('JSONPlaceholder Posts API', () => {
 
   // Test to check invalid user ID
   test('should handle invalid user ID', async () => {
-    const invalidUserId = 9999; // Invalid user ID
+    const invalidUserId = 9999; 
     const response = await axios.get(`${postsEndpoint}?userId=${invalidUserId}`);
     expect(response.status).toBe(200);
-    expect(response.data).toHaveLength(0); // Assuming no posts for the invalid user ID
+    expect(response.data).toHaveLength(0); 
   });
 
   // Test to check if titles are not empty
