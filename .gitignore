@@ -1,6 +1,6 @@
 # Ignore logs
-# google_test.log
-# json_test.log
+google_test.log
+json_test.log
 
 # Ignore Node.js dependencies
 node_modules/
