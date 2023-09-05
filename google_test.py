@@ -9,6 +9,9 @@ from selenium.webdriver.common.by import By
 class TestGoogleSearch(unittest.TestCase):
 
     def setUp(self):
+        if not os.path.exists('./logs'):
+            os.makedirs('./logs')
+
         logging.basicConfig(filename='./logs/google_test.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
         logging.info("Setting up test...")
 
