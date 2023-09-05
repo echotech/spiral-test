@@ -19,7 +19,7 @@ This is a simple test suite written in Python using the Selenium WebDriver frame
 2. Open a terminal/command prompt and navigate to the directory containing the test suite files.
 
 3. Run the following command to execute the test suite:
-```python googleTest.py```
+```python google_test.py```
 
 The test suite will automate the process of searching for "Ducks" on Google, interacting with the search results, and verifying their content.
 
