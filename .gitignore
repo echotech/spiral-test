@@ -1,5 +1,6 @@
-# Ignore logs folder
-logs/
+# Ignore logs
+# google_test.log
+# json_test.log
 
 # Ignore Node.js dependencies
 node_modules/
